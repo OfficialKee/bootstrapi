@@ -37,7 +37,7 @@ fetch('https://dog.ceo/api/breeds/image/random')
 
         submit.addEventListener('click',()=>{
             //console.log(input.value)
-            fetch(`https://goweather.herokuapp.com/weather/${input.value}`)
+            fetch(encodeURI(`https://goweather.herokuapp.com/weather/${input.value}`)) 
         .then(res =>{
             //console.log(res.json())
             return res.json()
